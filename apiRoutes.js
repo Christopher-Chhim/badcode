@@ -19,6 +19,7 @@ async function reviewPullRequest(repoUrl, prNumber) {
     return response.data; // JSON with PR summary, security issues, suggestions
   } catch (err) {
     console.error("Error calling CodeRabbit API:", err.response?.data || err.message);
+    throw err;
   }
 }
 
