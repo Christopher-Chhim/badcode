@@ -5,8 +5,8 @@ async function reviewPullRequest(repoUrl, prNumber) {
     const response = await axios.post(
       "https://api.coderabbit.ai/v1/review",
       {
-        repo_url: repoUrl,
-        pr_number: prNumber,
+        repo_url: 'https://github.com/Christopher-Chhim/badcode',
+        pr_number: 1,
       },
       {
         headers: {
@@ -24,5 +24,5 @@ async function reviewPullRequest(repoUrl, prNumber) {
 }
 
 // Example usage:
-reviewPullRequest("https://github.com/Christopher-Chhim/badcode", 42)
+reviewPullRequest("https://github.com/Christopher-Chhim/badcode", 1)
   .then(data => console.log("CodeRabbit Review:", data));

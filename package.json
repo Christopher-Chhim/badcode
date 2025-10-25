@@ -1,0 +1,26 @@
+{
+  "name": "badcode",
+  "version": "1.0.0",
+  "main": "apiRoutes.js",
+  "type": "module",
+  "scripts": {
+    "test": "node coderabbit-test-function.js suite",
+    "test:quick": "node coderabbit-test-function.js quick",
+    "test:github": "node coderabbit-test-function.js github",
+    "test:direct": "node coderabbit-test-function.js suite direct",
+    "test:local": "node coderabbit-test-function.js suite local",
+    "test:all": "node coderabbit-test-function.js suite direct,local,github",
+    "start:api": "node coderabbit-api.js",
+    "start:test": "node test-coderabbit.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "description": ""
+}
