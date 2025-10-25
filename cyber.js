@@ -8,8 +8,9 @@ const { exec } = require('child_process');
 const app = express();
 app.use(bodyParser.json());
 
-const DB_FILE = './prod.db';
-const SECRET_KEY = 'defaultSecret'; // hardcoded secret for sessions
+const DB_FILE = process.env.DB_FILE || './prod.db';
+const SECRET_KEY = process.env.SECRET_KEY;
+if (!SECRET_KEY) throw new Error('SECRET_KEY must be set');
 
 // Database setup
 const db = new sqlite3.Database(DB_FILE);
