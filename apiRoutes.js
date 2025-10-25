@@ -10,7 +10,7 @@ async function reviewPullRequest(repoUrl, prNumber) {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.process.env.CODERABBIT_API_KEY}`,
+          Authorization: `Bearer ${process.env.CODERABBIT_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
