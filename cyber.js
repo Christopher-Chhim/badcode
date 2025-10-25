@@ -58,13 +58,7 @@ app.post('/comment', (req, res) => {
 });
 
 // Debug endpoint leaking config
-app.get('/debug', (req, res) => {
-  res.json({
-    secret: SECRET_KEY,
-    db: DB_FILE,
-    env: process.env
-  });
-});
+app.get('/debug', (_req, res) => res.status(404).end());
 
 // Password hash routine, no salt
 app.post('/hash', (req, res) => {
